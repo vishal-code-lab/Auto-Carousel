@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousal</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            height: 100vh;
+            background-color: hsl(0,0%,94%);
+           display: grid;
+           place-items: center;
+        }
+        .child-img{
+            width: 60vw;
+            height: 50rem;
+            background-color: red;
+            border-radius: 1rem;
+            box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+            background-image: url(../images/snow.jpg);
+            
+            background-size: cover;
+            animation: gallery 10s linear;
+        }
+        @keyframes gallery{
+            0%{
+                background-image: url(../images/day.jpg);
+            }
+            50%{
+                background-image: url(../images/night.jpg);
+            }
+            100%{
+                border-image: url(../images/rain.jpeg);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="child-img"></div>
+    
+</body>
+</html>
